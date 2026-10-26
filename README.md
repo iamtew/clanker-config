@@ -6,7 +6,7 @@ Needs `just` on PATH (Windows and Linux).
 
 ## `skills/`
 
-Each folder here is a Cursor skill. Install copies it to `~/.cursor/skills/<name>/` (`HOME`, or `USERPROFILE` on Windows).
+Each folder here is a Cursor skill. Install copies it to `~/.cursor/skills/<name>/` (`HOME`, or `USERPROFILE` on Windows). `commit-clanker` is slash-invoked (`/commit-clanker`); extra words after the name are the prompt.
 
 ```
 just install
