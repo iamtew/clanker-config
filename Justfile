@@ -17,26 +17,36 @@ alias update := install
 
 [unix]
 install:
+    @echo "install: {{ src }} -> {{ dest }}"
     @mkdir -p "{{ dest }}"
     @for d in "{{ src }}"/*; do \
       [ -d "$d" ] || continue; \
       name="$(basename "$d")"; \
+      echo "  $name"; \
       rm -rf "{{ dest }}/$name"; \
       cp -R "$d" "{{ dest }}/$name"; \
     done
+    @echo "done"
 
 [windows]
 install:
-    @New-Item -ItemType Directory -Force -Path "{{ dest }}" | Out-Null; Get-ChildItem -Directory "{{ src }}" | ForEach-Object { $target = Join-Path "{{ dest }}" $_.Name; if (Test-Path $target) { Remove-Item -Recurse -Force $target }; Copy-Item -Recurse $_.FullName $target }
+    @Write-Host "install: {{ src }} -> {{ dest }}"; New-Item -ItemType Directory -Force -Path "{{ dest }}" | Out-Null; Get-ChildItem -Directory "{{ src }}" | ForEach-Object { Write-Host ("  " + $_.Name); $target = Join-Path "{{ dest }}" $_.Name; if (Test-Path $target) { Remove-Item -Recurse -Force $target }; Copy-Item -Recurse $_.FullName $target }; Write-Host "done"
 
 [unix]
 uninstall:
+    @echo "uninstall from {{ dest }} (only this repo's skill names)"
     @for d in "{{ src }}"/*; do \
       [ -d "$d" ] || continue; \
       name="$(basename "$d")"; \
-      rm -rf "{{ dest }}/$name"; \
+      if [ -e "{{ dest }}/$name" ]; then \
+        echo "  remove $name"; \
+        rm -rf "{{ dest }}/$name"; \
+      else \
+        echo "  skip $name (not installed)"; \
+      fi; \
     done
+    @echo "done"
 
 [windows]
 uninstall:
-    @Get-ChildItem -Directory "{{ src }}" | ForEach-Object { $target = Join-Path "{{ dest }}" $_.Name; if (Test-Path $target) { Remove-Item -Recurse -Force $target } }
+    @Write-Host "uninstall from {{ dest }} (only this repo's skill names)"; Get-ChildItem -Directory "{{ src }}" | ForEach-Object { $target = Join-Path "{{ dest }}" $_.Name; if (Test-Path $target) { Write-Host ("  remove " + $_.Name); Remove-Item -Recurse -Force $target } else { Write-Host ("  skip " + $_.Name + " (not installed)") } }; Write-Host "done"
