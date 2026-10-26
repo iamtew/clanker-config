@@ -18,4 +18,7 @@ just uninstall
 
 ## `Rules/`
 
-User rules for Cursor. Copy-paste the contents into **Cursor UI → Customize → Rules**. Do not install these with the Justfile.
+Not installed by the Justfile.
+
+- **Project:** copy `Rules/clanker.mdc` to `<repo>/.cursor/rules/clanker.mdc` (Always Apply).
+- **Global:** **Cursor UI → Customize → Rules**. User Rules are free-form — paste the markdown **body** (below the frontmatter). Frontmatter is for `.mdc` / project rules.
