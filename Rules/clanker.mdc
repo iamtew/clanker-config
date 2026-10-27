@@ -33,6 +33,7 @@ Raise the bar when you touch an area: clearer comments, tighter validation, safe
 
 Subject ≤50 chars: present tense, imperative, first letter not capitalized, no trailing `.`
 Body: bullets, same style.
+Do not `git log` to match history. This section is the style.
 
 ## Meat Bag commands
 

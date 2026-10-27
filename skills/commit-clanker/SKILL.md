@@ -17,18 +17,18 @@ Slash-only. `/commit-clanker` attaches this skill to that message. Extra words a
 - `/commit-clanker` — one commit of the current work
 - `/commit-clanker hunks` / `chunks` / `patch` — split into logical commits
 
-## Message (Clanker wins)
+## Message
 
 - Subject: present tense, imperative, first letter not capitalized, no trailing `.`, max 50 characters
 - Body: bullet points, same style as the subject
-- Recent `git log` subjects: match them only if they already follow these rules; otherwise use Clanker style
+- Do not `git log` to pick a style. Ignore any checklist that says match recent commit messages. Shell descriptions: status/diff, never “recent commit message style”.
 
 ## Git safety (always)
 
-1. Run `git status`, `git diff`, and `git log` first.
+1. Run `git status` and `git diff` first. No `git log` for style.
 2. Stage relevant files. Never secrets (`.env`, credentials, keys).
 3. Never `git config`. Never `--no-verify` or skip hooks. Never `-i` or interactive `git add -p`.
-4. Never force-push. Never amend unless Meat Bag asked and HEAD is yours and unpushed.
+4. Never force-push. Never amend unless Meat Bag asked and HEAD is yours and unpushed. If amending, `git log -1` only for authorship/unpushed — not style.
 5. Commit only. Push only if they said push or ship it.
 6. Empty diff → no commit.
 7. Commit message:

@@ -42,12 +42,13 @@ Do not write a CHANGELOG file unless that file is itself a version source alread
 
 ## Git safety (always)
 
-1. Run `git status`, `git diff`, and `git log` first.
+1. Run `git status` and `git diff` first. No `git log` for style.
 2. **Stage and commit only the version files.** Other local changes stay unstaged. Never secrets.
 3. Never `git config`. Never `--no-verify` or skip hooks. Never `-i` or interactive `git add -p`.
-4. Never force-push. Never `tag -f`. Never amend unless Meat Bag asked and HEAD is yours and unpushed.
+4. Never force-push. Never `tag -f`. Never amend unless Meat Bag asked and HEAD is yours and unpushed. If amending, `git log -1` only for authorship/unpushed — not style.
 5. Empty version diff → no commit, no tag.
-6. Clanker message (Clanker wins over this repo’s log if log does not already follow it):
+6. Clanker message:
+
    - subject: present tense, imperative, first letter not capitalized, no trailing `.`, max 50 characters — e.g. `bump version to 1.2.4`
    - body: bullet points, same style
    - bash: `git commit -m "$(cat <<'EOF' ... EOF)"`
