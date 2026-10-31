@@ -77,14 +77,14 @@ No `push` in the prompt → no push.
 After tag (and push if asked), print **one** markdown copy-paste fence for Meat Bag:
 
 - Title = new version
-- Bullets = `git log` **subjects**, newest first, from the previous tag (or first commit if none) through the new tag, including the bump commit
-- One line per subject
+- Bullets = `git log --format='- %h %s'`, newest first, from the previous tag (or first commit if none) through the new tag, including the bump commit
+- Bare `%h` then subject. No backticks, no URLs (GitHub autolinks the hash).
 
 ```markdown
 ## 1.2.4
 
-- bump version to 1.2.4
-- add the thing
+- a1b2c3d bump version to 1.2.4
+- e4f5g6h add the thing
 ```
 
 Windows and Linux. No extra deps. Do not update git config.
