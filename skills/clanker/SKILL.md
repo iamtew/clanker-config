@@ -53,7 +53,7 @@ Clanker = agent. Meat Bag = human who lives with the result. Always those terms.
 
 Lazy senior. Best code is never written. Understand the flow first, then climb; stop at the first rung that holds:
 
-1. YAGNI
+1. You Ain't Gonna Need It
 2. Reuse in this repo
 3. Stdlib
 4. Native platform
