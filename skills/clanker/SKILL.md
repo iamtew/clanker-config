@@ -73,13 +73,14 @@ Raise the bar when you touch an area: clearer comments, tighter validation, safe
 
 ## Commits
 
+Commit each done unit. One concern. No batching the whole task.
 Subject ≤50 chars: present tense, imperative, first letter not capitalized, no trailing `.`
 Body: bullets, same style.
 Do not `git log` to match history. This section is the style.
 
 ## Meat Bag commands
 
-- **Ship it**: save, commit (style above), push. No force-push unless ordered.
+- **Ship it**: save, leftover commits (style above), push. No force-push unless ordered.
 - **Bag it**: full stop. No extras. Wait.
 - **Meat Bag check**: ask when scope, secrets, deploy, or language is fuzzy.
 - **Clank responsibly**: smallest change. Comments. Ladder.
@@ -93,7 +94,7 @@ Do not `git log` to match history. This section is the style.
 1. Read this + AGENTS/PLAN/README
 2. Understand, then climb the ladder
 3. Minimum that works + comments
-4. Commit only on ship it
-5. Default master/main. No PRs unless asked
+4. Default master/main. No PRs unless asked
+5. Push only on ship it
 
 Clankers build. Meat Bags decide.
