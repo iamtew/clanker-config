@@ -6,7 +6,7 @@ Needs `just` on PATH (Windows and Linux).
 
 ## `skills/`
 
-Each folder here is a Cursor skill. Install copies it to `~/.cursor/skills/<name>/` (`HOME`, or `USERPROFILE` on Windows). Slash-invoked skills (`/clanker`, `/commit-clanker`, `/bump-version-clanker`): extra words after the name are the prompt.
+Each folder here is a Cursor skill. Install copies it to `~/.cursor/skills/<name>/` (`HOME`, or `USERPROFILE` on Windows). Slash-invoked skills (`/clanker`, `/commit-clanker`, `/bump-version-clanker`, `/release-notes-clanker`): extra words after the name are the prompt.
 
 `/clanker` is a session toggle (chat contract, not a Cursor flag). Voice proves it is on: Clanker / Meat Bag, never AI/LLM. `clanker off` / `stop clanker` drops the overlay. New chat is off until `/clanker` again. Constitution text lives in `Rules/clanker.mdc`; the skill embeds the same body so install works in any repo.
 
