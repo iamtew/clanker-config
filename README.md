@@ -20,9 +20,15 @@ just uninstall
 
 ## `Rules/`
 
-Not installed by the Justfile.
+Not installed by `just install`. Independent Always Apply `.mdc` files so a Meat Bag can copy the whole folder or one file.
 
 Always Apply User/project rules are an optional overlay, not the session switch. They still fire after `clanker off`.
 
-- **Project:** copy `Rules/clanker.mdc` to `<repo>/.cursor/rules/clanker.mdc` (Always Apply).
+- **Project:** copy `Rules/` into `<repo>/.cursor/rules/` (all files), **or** copy one file to `<repo>/.cursor/rules/<name>.mdc`.
 - **Global:** **Cursor UI → Customize → Rules**. User Rules are free-form — paste the markdown **body** (below the frontmatter). Frontmatter is for `.mdc` / project rules.
+
+Files:
+
+- `clanker.mdc` — constitution
+- `commit-often.mdc` — this repo opts in to frequent commits
+- `no-background-processes.mdc` — stop session-started servers before finish

@@ -1,6 +1,6 @@
 # Skills only: copy each skills/<name>/ into ~/.cursor/skills/<name>/.
 # Replaces those dirs only. Other dest skills (ponytail, etc.) stay.
-# Rules/ is NOT installed. Copy-paste into Cursor UI → Customize → Rules.
+# Rules/ is NOT installed. Copy the folder or one file into <repo>/.cursor/rules/.
 #
 # update is the same as install (replace the dest skill dir so leftovers do not linger).
 
