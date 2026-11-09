@@ -1,0 +1,11 @@
+# Workspace is NOT a Git repository
+
+This workspace is **not** a Git repository.
+
+- Do **not** attempt to run any Git commands (git status, git add, git commit, git push, git pull, git merge, git rebase, git checkout, git branch, git init, etc.).
+- Do **not** suggest creating commits, opening PRs, merging branches, rebasing, or pushing changes.
+- Do **not** assume version control is available or try to initialize a Git repository unless the user explicitly asks you to.
+- Ignore any Git-related tooling, status indicators, or workflows.
+
+Treat this workspace as a plain file system with no source control. Focus only on the files and tasks the user requests.
+
